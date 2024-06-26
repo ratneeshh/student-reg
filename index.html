@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <!-- Button to register -->
+    <button id="registerBtn">Register Yourself</button>
+
+    <!-- Button to load data -->
+    <button id="loadData">Load Data</button>
+
+    <!-- Container for displaying data -->
+    <div id="data"></div>
+
+    <!-- Button to hide data -->
+    <button id="hideData" style="display: none;">Hide Data</button>
+
+    <script>
+        // Redirect to registration page
+        document.getElementById('registerBtn').addEventListener('click', () => {
+            window.location.href = 'registration.html';
+        });
+
+        // Load data from server
+        document.getElementById('loadData').addEventListener('click', () => {
+            fetch('/get_students')
+                .then(response => response.json())
+                .then(data => {
+                    const dataDiv = document.getElementById('data');
+                    dataDiv.innerHTML = '';
+                    data.forEach(student => {
+                        dataDiv.innerHTML += `<p>${student.name} - ${student.rollNumber}</p>`;
+                    });
+                    // Show the hideData button after loading data
+                    document.getElementById('hideData').style.display = 'block';
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        // Hide data and hideData button
+        document.getElementById('hideData').addEventListener('click', () => {
+            // Hide the data
+            document.getElementById('data').style.display = 'none';
+            // Hide the hideData button itself
+            document.getElementById('hideData').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
