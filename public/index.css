@@ -21,6 +21,10 @@
     margin-left: 15px;
     align-items: center;
 
+
+}
+button:hover {
+  cursor: pointer;
 }
 .btns {
     align-content: center;
