@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  h1 {
+    color: #0056b3;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+  button {
+    background-color: yellow;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    margin-left: 15px;
+    align-items: center;
+
+}
+.btns {
+    align-content: center;
+    align-self:center ;
+}
