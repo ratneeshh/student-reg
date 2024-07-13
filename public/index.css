@@ -25,4 +25,18 @@
 .btns {
     align-content: center;
     align-self:center ;
+
+}
+table {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #F5F5DC;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 20px;
+  
 }

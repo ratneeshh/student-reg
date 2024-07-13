@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
-    <link rel = "stylesheet" type="text/css" href = "index.css">  
+    <link rel = "stylesheet" type="text/css" href = "registration.css">  
 </head>
 <body>
+    <div class="card">
     <h1>Student Registration Form</h1>
     <!-- Student registration form -->
     <form action="/submit_student_form" method="post">
-        Name: <input type="text" name="name"><br>
-        Roll Number: <input type="text" name="rollNumber"><br>
+        <span class="val">Name: </span><input type="text" name="name"><br>
+        <span class="val">Roll Number: </span><input type="text" name="rollNumber"><br>
         <input type="submit" value="Submit">
     </form>
+    </div>
+
 
     <!-- Link back to the main page -->
     <a href="/">Back to Home</a>

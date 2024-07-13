@@ -36,10 +36,13 @@
                 .then(response => response.json())
                 .then(data => {
                     const dataDiv = document.getElementById('data');
-                    dataDiv.innerHTML = '';
-                    data.forEach(student => {
-                        dataDiv.innerHTML += `<p>${student.name} - ${student.rollNumber}</p>`;
+                    let tableHTML = "<table><tr><th>Name</th><th>Skill</th><th>District</th><th>Block</th><th>Mobile Number</th></tr>";
+                    data.forEach(labour => {
+                        tableHTML += `<tr><td>${labour.name}</td><td>${labour.skill}</td><td>${labour.district}</td><td>${labour.block}</td><td>${labour.mobileNumber}</td></tr>`;
                     });
+                    tableHTML += "</table>";
+                    dataDiv.innerHTML = tableHTML;
+                    dataDiv.style.display = 'block';
                     // Show the hideData button after loading data
                     document.getElementById('hideData').style.display = 'block';
                 })
